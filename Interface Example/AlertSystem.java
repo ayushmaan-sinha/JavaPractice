@@ -32,9 +32,5 @@ public class Main{
         alertEmailAlertService.sendTrigger("Hello");
         AlertService alertPagerAlertService = new AlertService(new PagerNotification());
         alertPagerAlertService.sendTrigger("Hello");
-
-
-        
-
     }
 }
