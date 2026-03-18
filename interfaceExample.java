@@ -24,3 +24,15 @@ public class CheckoutService{
         paymentGateway.initiatePayment(amount);
     }
 }
+public class Main{
+    public static void main(String args[]){
+        PaymentGateway stripePayment = new PaymentGateway();
+        CheckoutService checkoutService = new CheckoutService(stripePayment);
+        checkoutService.checkout(23.45);
+
+        PaymentGateway razorPayment = new PaymentGateway();
+        checkoutService.setPaymentGateway(razorPayment);
+        checkoutService.checkout(24.45);
+
+    }
+}
